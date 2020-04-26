@@ -320,6 +320,12 @@ function archive_teslacam_clips () {
 	    export ARCHIVE_TRIGGER_SENTRY
 	fi
 	    
+	# Create trigger file for RecentClips
+	if [ ! -z "${ARCHIVE_TRIGGER_RECENT+x}" ]
+	then
+	    export ARCHIVE_TRIGGER_RECENT
+	fi
+
         /root/bin/archive-clips.sh
 
         # If Sentry Mode was previously disabled, restore it to that state

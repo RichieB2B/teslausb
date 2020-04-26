@@ -98,6 +98,16 @@ then
     touch "$ARCHIVE_MOUNT/SentryClips/${ARCHIVE_TRIGGER_SENTRY}"
 fi
 
+# also archve RecentClips
+moveclips "$CAM_MOUNT/TeslaCam/RecentClips"
+
+# Create trigger file for RecentClips
+if [ ! -z "${ARCHIVE_TRIGGER_RECENT+x}" ]
+then
+    log "Creating RecentClips Trigger File: $ARCHIVE_MOUNT/RecentClips/${ARCHIVE_TRIGGER_RECENT}"
+    touch "$ARCHIVE_MOUNT/RecentClips/${ARCHIVE_TRIGGER_RECENT}"
+fi
+
 # 2020.8.1 firmware adds a folder for track mode V2
 moveclips "$CAM_MOUNT/TeslaTrackMode"
 

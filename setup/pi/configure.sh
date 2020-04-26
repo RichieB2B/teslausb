@@ -380,6 +380,12 @@ then
     echo "ARCHIVE_TRIGGER_SENTRY=${trigger_file_sentry}" >> $configFile
 fi
 
+# shellcheck disable=SC2154
+if [ ! -z "${trigger_file_recent+x}" ]
+then
+    echo "ARCHIVE_TRIGGER_RECENT=${trigger_file_recent}" >> $configFile
+fi
+
 archive_module="$( get_archive_module )"
 log_progress "Using archive module: $archive_module"
 
