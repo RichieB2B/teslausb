@@ -25,6 +25,9 @@ export sharepassword=password
 # Uncomment to disable snapshots. This also disables samba and RecentClips-extension
 #export SNAPSHOTS_ENABLED=false
 
+# Uncomment to always disable senty mode when files have been uploaded.
+#export DISABLE_SENTRY=true
+
 # Recommendations on image sizes:
 # Notes:
 #   * You can use relative sizes to the available space (e.g., 10%) or explicit sizes (e.g., 16G)
